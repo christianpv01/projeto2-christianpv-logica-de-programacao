@@ -7,16 +7,19 @@ Var
 Função SuperSomador (A,B: Inteiro): Inteiro
 Var
 Inicio
+   Soma <- X
    Para i <- X até Y faça
       Se X < Y então
-         Escreva(X,"+")
+         Escreva(X," +")
          X <- X + 1
+         Soma <- Soma + X
       FimSe
       Se X = Y então
-         Escreva(Y)
+         Escreva(Y," = ",Soma)
          Interrompa
       FimSe
    FimPara
+   EscrevaL
    Retorne Soma
 FimFunção
 
@@ -26,16 +29,5 @@ Inicio
    Escreva("Digite o maior valor: ")
    Leia(Y)
    Soma <- SuperSomador (X,Y: Inteiro)
-   Escreva("SuperSomador(",X,",",Y,") vai somar")
-   Para i <- X até Y faça
-      Se X < Y então
-         Escreva(X,"+")
-         X <- X + 1
-      FimSe
-      Se X = Y então
-         Escreva(Y)
-         Interrompa
-      FimSe
-   FimPara
-   Escreva(" =",Soma)
+
 Fimalgoritmo
